@@ -1,4 +1,3 @@
-import java.util.*;
 public class Body {
 private Muscle[] arms = new Muscle[10];
 private int armsEls = 0;
