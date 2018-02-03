@@ -1,4 +1,8 @@
-  public int frequency;
+package fitnessapp;
+
+public class Heads
+{
+    public int frequency;
     String name;
     public Heads()
     {
