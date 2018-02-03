@@ -27,7 +27,7 @@ public Body()
 
 public void addMuscle(Muscle x)
 {
-	if(x.getName() == "bicep" || x.getName() == "tricep" || x.getName() == "forearm" || x.getName() == "shoulders")
+	if(x.getName() == "biceps" || x.getName() == "triceps" || x.getName() == "forearms" || x.getName() == "shoulders")
 	{
 		arms[armsEls] = x;
 		armsEls++;
@@ -45,7 +45,7 @@ public void addMuscle(Muscle x)
 	else if(x.getName() == "rectus abdominus" || x.getName() == "obliques" || x.getName() == "serratus")
 	{
 		core[coreEls] = x;
-		armsEls++;
+		coreEls++;
 	}
 	else
 	{

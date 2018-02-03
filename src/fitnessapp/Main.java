@@ -5,17 +5,18 @@
  */
 package fitnessapp;
 
+
 public class Main {
-	public static void main(String[] args)
+    public static void main(String[] args)
     {
-		/* Beginning of hardcoded muscles*/
+        /* Beginning of hardcoded muscles*/
         Muscle[] Anatomy = new Muscle[18];
         Heads[] shoulderH = new Heads[3],bicepsH = new Heads[3],tricepsH = new Heads[3];
         Heads[] forearmsH = new Heads[3], calvesH = new Heads[2], hamstringsH = new Heads[3];
         Heads[] gluteusH = new Heads[3],quadricepsH = new Heads[3], pectMaH = new Heads[3], serratusPosH = new Heads[2], teresH = new Heads[2];
         Heads pectMiH = new Heads(), rectusH = new Heads(), obliquesH = new Heads(), trapeziusH = new Heads(), latissH = new Heads(), thoraH = new Heads(), serratusH = new Heads();
         
-        Anatomy[0] = new Muscle("shoulder");
+        Anatomy[0] = new Muscle("shoulders");
         shoulderH[0] = new Heads("anterior");
         shoulderH[1]= new Heads("middle");        
         shoulderH[2]= new Heads("posterior");
@@ -59,8 +60,8 @@ public class Main {
         
         Anatomy[6]= new Muscle("glueteus");
         gluteusH[0]= new Heads("medius");
-        gluteusH[0]= new Heads("maximus");
-        gluteusH[0]= new Heads("minimus");
+        gluteusH[1]= new Heads("maximus");
+        gluteusH[2]= new Heads("minimus");
         for (int i = 0; i < 3; i++)
             Anatomy[6].setHeads(gluteusH[i]);
 
@@ -127,24 +128,25 @@ public class Main {
         
     }
 
-	
-	public static void buildBody(Body a, Muscle[] Anatomy)
-	{//adds all muscles to body
-		for(int i =0; i < 18; i++)//there are 18 muscles currently accounted for and are hardcoded
-		{
-			a.addMuscle(Anatomy[i]);
-		}
-	}
-	
-	public static void printBody(Body a)
-	{
-		Muscle[] toPrint = a.getArms();
-		for(int i = 0; i< a.armsEls; i++)
-		{
-			System.out.println(toPrint[i].getName());
-		}
-		
-	}
+    
+    public static void buildBody(Body a, Muscle[] Anatomy)
+    {//adds all muscles to body
+        for(int i =0; i < 18; i++)//there are 18 muscles currently accounted for and are hardcoded
+        {
+            a.addMuscle(Anatomy[i]);
+        }
+    }
+    
+    public static void printBody(Body a)
+    {
+        Muscle[] toPrint = a.getArms();
+                int g = a.armsEls;
+        for(int i = 0; i< a.armsEls; i++)
+        {
+            System.out.println(toPrint[i].getName());
+        }
+        
+    }
 
 }
 

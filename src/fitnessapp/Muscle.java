@@ -10,9 +10,9 @@ public class Muscle {
     }
     public Muscle(String x)
     {
-    	name = x;
-    	muscleHeads = new Heads[5];
-    	headsEls = 0;
+        name = x;
+        muscleHeads = new Heads[5];
+        headsEls = 0;
     }
     
     public String getName()
@@ -25,7 +25,8 @@ public class Muscle {
     }
     public void setHeads(Heads x)
     {
-    	muscleHeads[headsEls] = x;
-    	headsEls++;
+        muscleHeads[headsEls] = x;
+        headsEls++;
     }
 }
+
