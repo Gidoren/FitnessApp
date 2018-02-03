@@ -6,13 +6,80 @@
     android:layout_height="match_parent"
     tools:context="com.example.justi.personaltrainer.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <ImageButton
+        android:id="@+id/rightArm"
+        android:layout_width="90dp"
+        android:layout_height="178dp"
+        android:background="@drawable/right_arm"
+        android:scaleType="fitCenter"
+        tools:layout_editor_absoluteX="77dp"
+        tools:layout_editor_absoluteY="100dp" />
 
+    <ImageButton
+        android:id="@+id/leftArm"
+        android:layout_width="90dp"
+        android:layout_height="178dp"
+        android:background="@drawable/left_arm"
+        android:scaleType="fitCenter"
+        tools:layout_editor_absoluteX="219dp"
+        tools:layout_editor_absoluteY="100dp" />
+
+    <ImageButton
+        android:id="@+id/back"
+        android:layout_width="71dp"
+        android:layout_height="35dp"
+        android:background="@drawable/back"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toStartOf="@+id/leftArm"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/rightArm"
+        tools:layout_editor_absoluteY="85dp" />
+
+    <ImageButton
+        android:id="@+id/pectoral"
+        android:layout_width="102dp"
+        android:layout_height="43dp"
+        android:background="@drawable/pectoral"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="105dp" />
+
+    <ImageButton
+        android:id="@+id/rightLeg"
+        android:layout_width="44dp"
+        android:layout_height="288dp"
+        android:background="@drawable/right_leg"
+        android:scaleType="fitCenter"
+        tools:layout_editor_absoluteX="147dp"
+        tools:layout_editor_absoluteY="215dp" />
+
+    <ImageButton
+        android:id="@+id/abdominal"
+        android:layout_width="92dp"
+        android:layout_height="133dp"
+        android:background="@drawable/abdominal"
+        android:scaleType="fitCenter"
+        tools:layout_editor_absoluteX="146dp"
+        tools:layout_editor_absoluteY="140dp" />
+
+    <ImageButton
+        android:id="@+id/leftLeg"
+        android:layout_width="44dp"
+        android:layout_height="277dp"
+        android:background="@drawable/left_leg"
+        android:scaleType="fitCenter"
+        tools:layout_editor_absoluteX="194dp"
+        tools:layout_editor_absoluteY="225dp" />
+
+    <ImageView
+        android:id="@+id/head"
+        android:layout_width="49dp"
+        android:layout_height="69dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/head"
+        tools:layout_editor_absoluteY="20dp" />
 </android.support.constraint.ConstraintLayout>
