@@ -1,5 +1,3 @@
-package fitnessapp;
-
 public class Muscle {
     public String name;
     Heads[] muscleHeads;
@@ -7,6 +5,7 @@ public class Muscle {
     public Muscle()
     {
         name = "";
+        muscleHeads = new Heads[5];
     }
     public String getName()
     {
@@ -16,4 +15,6 @@ public class Muscle {
     {
         name = s;
     }
+    
+
 }
