@@ -1,5 +1,0 @@
-To Do:
-Compartmentalize current code into a classes
-Convert Python Code
-Handle Nutrion Api
-connect seperated
