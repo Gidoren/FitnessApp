@@ -4,10 +4,17 @@ public class Muscle {
     int headsEls;
     public Muscle()
     {
-        name = "";
+        name = " ";
         muscleHeads = new Heads[5];
         headsEls = 0;
     }
+    public Muscle(String x)
+    {
+    	name = x;
+    	muscleHeads = new Heads[5];
+    	headsEls = 0;
+    }
+    
     public String getName()
     {
         return name;
