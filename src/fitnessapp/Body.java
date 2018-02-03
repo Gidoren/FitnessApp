@@ -10,7 +10,7 @@ private int backEls = 0;
 private Muscle[] core = new Muscle[10];
 private int coreEls = 0;
 
-public void addMuscle(Muscle x, String name)
+public void addMuscle(Muscle x)
 {
 	if(x.getName() == "bicep" || x.getName() == "tricep" || x.getName() == "forearm" || x.getName() == "shoulders")
 	{
