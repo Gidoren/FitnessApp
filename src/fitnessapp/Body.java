@@ -1,14 +1,29 @@
 public class Body {
-private Muscle[] arms = new Muscle[10];
-private int armsEls = 0;
-private Muscle[] legs = new Muscle[10];
-private int legsEls = 0;
-private Muscle[] chest = new Muscle[10];
-private int chestEls = 0;
-private Muscle[] back = new Muscle[10];
-private int backEls = 0;
-private Muscle[] core = new Muscle[10];
-private int coreEls = 0;
+private Muscle[] arms;
+public int armsEls;
+private Muscle[] legs;
+public int legsEls;
+private Muscle[] chest;
+public int chestEls;
+private Muscle[] back;
+public int backEls;
+private Muscle[] core;
+public int coreEls;
+
+public Body()
+{
+	arms = new Muscle[10];
+	armsEls = 0;
+	legs = new Muscle[10];
+	legsEls = 0;
+	chest = new Muscle[10];
+	chestEls = 0;
+	back = new Muscle[10];
+	backEls = 0;
+	core = new Muscle[10];
+	coreEls = 0;
+}
+
 
 public void addMuscle(Muscle x)
 {
