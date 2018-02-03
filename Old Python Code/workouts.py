@@ -6,7 +6,7 @@ class Workouts():
 		workouts. """
 	def __init__(self):
 		self.filename = 'workouts.json'
-		self.BlobCode = 'de287001-ad6a-11e7-a347-bbe294d54576'
+		self.BlobCode = '09565048-0908-11e8-8df3-4fb0a68d6481'
 		self.url = 'https://jsonblob.com/api/jsonBlob/' + self.BlobCode
 		self.workouts = {}
 		try:
