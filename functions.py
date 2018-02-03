@@ -3,7 +3,7 @@ import workouts as work
 from workouts import Workouts
 work = Workouts()
 
-def print_groups(body):
+def print_groups(body):#do not use this function print_dict is more manageable
 	print(body.name)
 	for part in body.muscles:
 		print("\n" + str(part) + ":")
