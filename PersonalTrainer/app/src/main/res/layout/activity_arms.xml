@@ -7,10 +7,10 @@
     tools:context="com.example.justi.personaltrainer.Arms">
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/shoulder"
         android:layout_width="385dp"
         android:layout_height="wrap_content"
-        android:text="Shoulders"
+        android:text="Shoulder"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.501"
@@ -19,13 +19,37 @@
         app:layout_constraintVertical_bias="0.079" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/bicep"
         android:layout_width="375dp"
         android:layout_height="wrap_content"
-        android:text="Button"
+        android:text="Bicep"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.22" />
+
+    <Button
+        android:id="@+id/tricep"
+        android:layout_width="376dp"
+        android:layout_height="wrap_content"
+        android:text="Tricep"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.369" />
+
+    <Button
+        android:id="@+id/forearm"
+        android:layout_width="369dp"
+        android:layout_height="wrap_content"
+        android:text="Forearm"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.533"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.518" />
 </android.support.constraint.ConstraintLayout>
