@@ -11,7 +11,7 @@ import android.widget.TextView;
 
 public class Pop extends Activity {
 
-    static String text = new String();
+    static String text = "S'all Good";
     TextView message;
 
     @Override
@@ -32,8 +32,20 @@ public class Pop extends Activity {
         getWindow().setLayout((int)(width * .7), (int)(height * .2));
     }
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Pop.setMessage("S'all Good");
+    }
+
     public static void setMessage(String m)
     {
         text = m;
     }
+
+    public static String getMessage()
+    {
+        return text;
+    }
+
 }

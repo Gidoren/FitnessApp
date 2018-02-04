@@ -19,7 +19,7 @@
 
     <Button
         android:id="@+id/serra"
-        android:layout_width="103dp"
+        android:layout_width="107dp"
         android:layout_height="wrap_content"
         android:background="@android:drawable/btn_default"
         android:text="Serratus Posterior"
