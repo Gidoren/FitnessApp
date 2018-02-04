@@ -3,18 +3,20 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+package com.example.justi.personaltrainer;
+
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
 
 public class Calculator {
-    
+
     Body a;
-    
+
     public Calculator()
     {
-        new JsonLoading();
+        //new JsonLoading();
         
         /* Beginning of hardcoded muscles*/
         JsonLoading workouts = new JsonLoading(); //Intantiate the JsonLoading class
@@ -136,7 +138,8 @@ public class Calculator {
         workCalculations("front deltoid raise",a);
         workCalculations("side deltoid raise",a);
         workCalculations("rear deltoid flies",a);
-       
+
+        System.out.println(a.arms[0].muscleHeads[0].getWork());
     }
 
     /***********************************************************

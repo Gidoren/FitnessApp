@@ -4,7 +4,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package fitnessapp;
+package com.example.justi.personaltrainer;
 
 //Imports
 import java.io.InputStreamReader;
@@ -30,9 +30,9 @@ public class JsonLoading {
     private static final String BlobCode = "09565048-0908-11e8-8df3-4fb0a68d6481";
     private static final String url = "https://jsonblob.com/api/jsonBlob/";
     private static final String filename = "workouts.txt";
-    private static final String path = "libs/" + filename;
+    private static final String path = "main/res/" + filename;
     private static File workoutList = new File(path);
-    private static Gson googleJson = new Gson();;
+    private static Gson googleJson = new Gson();
     
     //Used for testing, Main method 
     public static void main(String [] args)
