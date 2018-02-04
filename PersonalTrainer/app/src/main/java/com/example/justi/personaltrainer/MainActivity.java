@@ -12,7 +12,15 @@ public class MainActivity extends AppCompatActivity {
 
     private ImageButton rightArm;
     private ImageButton leftArm;
+
     Calculator c;
+
+    private ImageButton abdominal;
+    private ImageButton pectoral;
+    private ImageButton leftLeg;
+    private ImageButton rightLeg;
+    private ImageButton back;
+    
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -38,6 +46,46 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        abdominal = (ImageButton)findViewById(R.id.abdominal);
+        abdominal.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                callAbs();
+            }
+        });
+
+        pectoral = (ImageButton)findViewById(R.id.pectoral);
+        pectoral.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                callChest();
+            }
+        });
+
+        rightLeg = (ImageButton)findViewById(R.id.rightLeg);
+        rightLeg.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                callLegs();
+            }
+        });
+
+        leftLeg = (ImageButton)findViewById(R.id.leftLeg);
+        leftLeg.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                callLegs();
+            }
+        });
+
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
         StrictMode.setThreadPolicy(policy);
         c = new Calculator();
@@ -46,6 +94,24 @@ public class MainActivity extends AppCompatActivity {
     public void callArms()
     {
         Intent startNewActivity = new Intent(this, Arms.class);
+        startActivity(startNewActivity);
+    }
+
+    public void callAbs()
+    {
+        Intent startNewActivity = new Intent(this, Abdominals.class);
+        startActivity(startNewActivity);
+    }
+
+    public void callChest()
+    {
+        Intent startNewActivity = new Intent(this, Chest.class);
+        startActivity(startNewActivity);
+    }
+
+    public void callLegs()
+    {
+        Intent startNewActivity = new Intent(this, Legs.class);
         startActivity(startNewActivity);
     }
 
