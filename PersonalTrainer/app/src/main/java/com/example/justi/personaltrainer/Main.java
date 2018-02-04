@@ -3,19 +3,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+package fitnessapp;
+
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
 
-public class Calculator {
-    
-    Body a;
-    
-    public Calculator()
+public class Main {
+    public static void main(String[] args)
     {
-        new JsonLoading();
-        
         /* Beginning of hardcoded muscles*/
         JsonLoading workouts = new JsonLoading(); //Intantiate the JsonLoading class
         Muscle[] Anatomy = new Muscle[18];
@@ -129,8 +126,9 @@ public class Calculator {
         thoraH= new Heads("thoracolumbar fascia");
         Anatomy[17].setHeads(thoraH);
         /*End of hardcoded muscles*/
-        a = new Body();
+        Body a = new Body();
         buildBody(a, Anatomy);
+        new JsonLoading();
         //test the calculations of exercise on the work variable
         //found in the muscle heads node class
         workCalculations("front deltoid raise",a);
