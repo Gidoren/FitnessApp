@@ -89,8 +89,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Shoulder Exercises"
-        android:textSize="26"
+        android:textSize="26dp"
         tools:layout_editor_absoluteX="83dp"
-        tools:layout_editor_absoluteY="45dp" />
+        tools:layout_editor_absoluteY="43dp" />
 
 </android.support.constraint.ConstraintLayout>
