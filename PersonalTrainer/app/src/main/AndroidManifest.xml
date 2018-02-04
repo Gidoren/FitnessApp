@@ -23,7 +23,8 @@
         <activity android:name=".Abdominals" />
         <activity android:name=".Pectorals" />
         <activity android:name=".Chest" />
-        <activity android:name=".Legs"></activity>
+        <activity android:name=".Legs" />
+        <activity android:name=".Back"></activity>
     </application>
 
 </manifest>

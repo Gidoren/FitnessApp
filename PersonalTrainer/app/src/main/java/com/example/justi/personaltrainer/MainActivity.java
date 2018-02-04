@@ -83,6 +83,16 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        back = (ImageButton)findViewById(R.id.back);
+        back.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                callBack();
+            }
+        });
+
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
         StrictMode.setThreadPolicy(policy);
         Calculator c = new Calculator();
@@ -109,6 +119,12 @@ public class MainActivity extends AppCompatActivity {
     public void callLegs()
     {
         Intent startNewActivity = new Intent(this, Legs.class);
+        startActivity(startNewActivity);
+    }
+
+    public void callBack()
+    {
+        Intent startNewActivity = new Intent(this, Back.class);
         startActivity(startNewActivity);
     }
 
