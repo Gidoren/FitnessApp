@@ -130,6 +130,9 @@ public class Main {
         buildBody(a, Anatomy);
         new JsonLoading();
         workCalculations("front deltoid raise",a);
+        workCalculations("side deltoid raise",a);
+        workCalculations("rear deltoid flies",a);
+       
     }
 
     
@@ -158,29 +161,29 @@ public class Main {
         Iterator it = entrySet.iterator();
         while(it.hasNext())
         {
-            System.out.println("We are actually adding values to a muscle head now");
             Map.Entry me = (Map.Entry)it.next();
             String[] answers = (String[])me.getKey();
             switch(answers[0])
             {
                 case("arms"):
-                    body.arms[Integer.parseInt(answers[1])].muscleHeads[Integer.parseInt(answers[2])].add((int)me.getValue());
+                    body.arms[Integer.parseInt(answers[1])].muscleHeads[Integer.parseInt(answers[2])].add((Integer)me.getValue());
                     break;
                 case("legs"):
-                    body.legs[Integer.parseInt(answers[1])].muscleHeads[Integer.parseInt(answers[2])].add((int)me.getValue());
+                    body.legs[Integer.parseInt(answers[1])].muscleHeads[Integer.parseInt(answers[2])].add((Integer)me.getValue());
                     break;
                 case("chest"):
-                    body.chest[Integer.parseInt(answers[1])].muscleHeads[Integer.parseInt(answers[2])].add((int)me.getValue());
+                    body.chest[Integer.parseInt(answers[1])].muscleHeads[Integer.parseInt(answers[2])].add((Integer)me.getValue());
                     break;
                 case("core"):
-                    body.legs[Integer.parseInt(answers[1])].muscleHeads[Integer.parseInt(answers[2])].add((int)me.getValue());
+                    body.legs[Integer.parseInt(answers[1])].muscleHeads[Integer.parseInt(answers[2])].add((Integer)me.getValue());
                     break;
                 case("back"):
-                    body.legs[Integer.parseInt(answers[1])].muscleHeads[Integer.parseInt(answers[2])].add((int)me.getValue());
+                    body.legs[Integer.parseInt(answers[1])].muscleHeads[Integer.parseInt(answers[2])].add((Integer)me.getValue());
                     break; 
             }
             
         }
     }
+    
 
 }
