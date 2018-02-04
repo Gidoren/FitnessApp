@@ -24,20 +24,18 @@ import java.util.Map;
  */
 public class JsonLoading {
     
-    private JsonElement jse;
-    private JsonElement jse2;
-    private final String API_TOKEN;
-    private final String BlobCode;
-    private final String url;
-    private final String filename;
-    private final String path;
-    private File workoutList;
-    Gson googleJson;
+    private static JsonElement jse;
+    private static final String BlobCode = "09565048-0908-11e8-8df3-4fb0a68d6481";
+    private static final String url = "https://jsonblob.com/api/jsonBlob/";
+    private static final String filename = "workouts.txt";
+    private static final String path = "libs/" + filename;
+    private static File workoutList = new File(path);
+    private static Gson googleJson = new Gson();;
     
     public static void main(String [] args)
     {
-        JsonLoading a = new JsonLoading();
-        HashMap b = a.getWorkout("front deltoid raise");
+        new JsonLoading();
+        HashMap b = JsonLoading.getWorkout("front deltoid raise");
         Set entrySet = b.entrySet();
         Iterator it = entrySet.iterator();
         System.out.println("HashMap Key-Value Pairs: ");
@@ -52,16 +50,9 @@ public class JsonLoading {
         
         
     }
+    
     public JsonLoading()
     {
-        googleJson = new Gson();
-        API_TOKEN = "8f22769dd8ec2d6e";
-        filename = "workouts.txt";
-        url = "https://jsonblob.com/api/jsonBlob/";
-        BlobCode = "09565048-0908-11e8-8df3-4fb0a68d6481";
-        path = "libs/" + filename;
-        workoutList = new File(path);
-        
         try
         {
             JsonParser parser = new JsonParser();
@@ -134,7 +125,7 @@ public class JsonLoading {
         }
     }
     
-    public HashMap getWorkout(String name)
+    public static HashMap getWorkout(String name)
     {   
         //System.out.println("Searching for " + name);
         HashMap<String[],Integer> workouts = new HashMap();
