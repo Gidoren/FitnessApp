@@ -20,7 +20,10 @@
         </activity>
         <activity android:name=".Arms" />
         <activity android:name=".Shoulders" />
-        <activity android:name=".Abdominals"></activity>
+        <activity android:name=".Abdominals" />
+        <activity android:name=".Pectorals" />
+        <activity android:name=".Chest" />
+        <activity android:name=".Legs"></activity>
     </application>
 
 </manifest>
