@@ -1,3 +1,4 @@
+// Back class file, which shows the different muscles of the back
 package com.example.justi.personaltrainer;
 
 import android.support.v7.app.AppCompatActivity;

@@ -1,3 +1,4 @@
+// Legs class file, which shows the different muscles of the legs
 package com.example.justi.personaltrainer;
 
 import android.support.v7.app.AppCompatActivity;
