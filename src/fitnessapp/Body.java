@@ -1,13 +1,16 @@
+package fitnessapp;
+
+
 public class Body {
-private Muscle[] arms;
+Muscle[] arms;
 public int armsEls;
-private Muscle[] legs;
+Muscle[] legs;
 public int legsEls;
-private Muscle[] chest;
+Muscle[] chest;
 public int chestEls;
-private Muscle[] back;
+Muscle[] back;
 public int backEls;
-private Muscle[] core;
+Muscle[] core;
 public int coreEls;
 
 public Body()

@@ -5,11 +5,16 @@
  */
 package fitnessapp;
 
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Set;
 
 public class Main {
     public static void main(String[] args)
     {
         /* Beginning of hardcoded muscles*/
+        JsonLoading workouts = new JsonLoading(); //Intantiate the JsonLoading class
         Muscle[] Anatomy = new Muscle[18];
         Heads[] shoulderH = new Heads[3],bicepsH = new Heads[3],tricepsH = new Heads[3];
         Heads[] forearmsH = new Heads[3], calvesH = new Heads[2], hamstringsH = new Heads[3];
@@ -123,8 +128,11 @@ public class Main {
         /*End of hardcoded muscles*/
         Body a = new Body();
         buildBody(a, Anatomy);
-        printBody(a);
-        
+        new JsonLoading();
+        workCalculations("front deltoid raise",a);
+        workCalculations("side deltoid raise",a);
+        workCalculations("rear deltoid flies",a);
+       
     }
 
     
@@ -146,5 +154,36 @@ public class Main {
         }
         
     }
+    public static void workCalculations(String name, Body body)
+    {
+        HashMap<String[],Integer> temp = JsonLoading.getWorkout(name);
+         Set entrySet = temp.entrySet();
+        Iterator it = entrySet.iterator();
+        while(it.hasNext())
+        {
+            Map.Entry me = (Map.Entry)it.next();
+            String[] answers = (String[])me.getKey();
+            switch(answers[0])
+            {
+                case("arms"):
+                    body.arms[Integer.parseInt(answers[1])].muscleHeads[Integer.parseInt(answers[2])].add((Integer)me.getValue());
+                    break;
+                case("legs"):
+                    body.legs[Integer.parseInt(answers[1])].muscleHeads[Integer.parseInt(answers[2])].add((Integer)me.getValue());
+                    break;
+                case("chest"):
+                    body.chest[Integer.parseInt(answers[1])].muscleHeads[Integer.parseInt(answers[2])].add((Integer)me.getValue());
+                    break;
+                case("core"):
+                    body.legs[Integer.parseInt(answers[1])].muscleHeads[Integer.parseInt(answers[2])].add((Integer)me.getValue());
+                    break;
+                case("back"):
+                    body.legs[Integer.parseInt(answers[1])].muscleHeads[Integer.parseInt(answers[2])].add((Integer)me.getValue());
+                    break; 
+            }
+            
+        }
+    }
+    
 
 }
