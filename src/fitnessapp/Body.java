@@ -1,3 +1,6 @@
+package fitnessapp;
+
+
 public class Body {
 private Muscle[] arms;
 public int armsEls;

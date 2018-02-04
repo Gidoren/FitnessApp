@@ -10,6 +10,7 @@ public class Main {
     public static void main(String[] args)
     {
         /* Beginning of hardcoded muscles*/
+        JsonLoading workouts = new JsonLoading(); //Intantiate the JsonLoading class
         Muscle[] Anatomy = new Muscle[18];
         Heads[] shoulderH = new Heads[3],bicepsH = new Heads[3],tricepsH = new Heads[3];
         Heads[] forearmsH = new Heads[3], calvesH = new Heads[2], hamstringsH = new Heads[3];
