@@ -63,7 +63,7 @@ public class Arms extends AppCompatActivity {
 
     public void callShoulder()
     {
-        Intent startNewActivity = new Intent(this, Arms.class);
+        Intent startNewActivity = new Intent(this, Shoulders.class);
         startActivity(startNewActivity);
     }
 
