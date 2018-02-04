@@ -19,20 +19,25 @@ import java.util.Set;
 import java.io.PrintWriter;
 import java.util.Iterator;
 import java.util.Map;
+import java.util.Date;
 /**
  * Class for grabbing the JSON file if it isn't locally on the machine.
  * @author Tayler
  */
 //Constructor
 public class JsonLoading {
-    
+    private static String day;
     private static JsonElement jse;
     private static final String BlobCode = "09565048-0908-11e8-8df3-4fb0a68d6481";
     private static final String url = "https://jsonblob.com/api/jsonBlob/";
     private static final String filename = "workouts.txt";
+    private static final String historyFile = "history.txt";
     private static final String path = "main/res/" + filename;
+    private static final String historyPath = "main/res/" + filename;
     private static File workoutList = new File(path);
+    private static File history = new File(historyPath);
     private static Gson googleJson = new Gson();
+    static Date a  = new Date();
     
     //Used for testing, Main method 
     public static void main(String [] args)
@@ -57,6 +62,8 @@ public class JsonLoading {
     //It will find the download the JSon from online if it isn't on the local machine.
     public JsonLoading()
     {
+        day = a.toString();
+        System.out.println("The date today is :" + day);
         try
         {
             JsonParser parser = new JsonParser();
