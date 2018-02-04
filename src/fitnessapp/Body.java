@@ -1,5 +1,10 @@
+/*********************************************************************************
+Body class  contains multiple arrays of the muscle class
+seperating the muscles into their own subsections of the
+body itself. it is also checking the data of the muscles implemented in main
+class to build the human anatomy in muscles.
+**********************************************************************************/
 package fitnessapp;
-
 
 public class Body {
 Muscle[] arms;

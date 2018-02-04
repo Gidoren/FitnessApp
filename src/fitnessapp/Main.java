@@ -129,13 +129,17 @@ public class Main {
         Body a = new Body();
         buildBody(a, Anatomy);
         new JsonLoading();
+        //test the calculations of exercise on the work variable
+        //found in the muscle heads node class
         workCalculations("front deltoid raise",a);
         workCalculations("side deltoid raise",a);
         workCalculations("rear deltoid flies",a);
        
     }
 
-    
+    /***********************************************************
+    builds the body object using the data of muscles provided
+    *************************************************************/
     public static void buildBody(Body a, Muscle[] Anatomy)
     {//adds all muscles to body
         for(int i =0; i < 18; i++)//there are 18 muscles currently accounted for and are hardcoded
@@ -154,6 +158,10 @@ public class Main {
         }
         
     }
+    
+    //This is the function that your buttons call. There is a body (called a)
+    //That you use for the body, and the name is the name of the workout, which
+    //is then called to the JsonLoading function.
     public static void workCalculations(String name, Body body)
     {
         HashMap<String[],Integer> temp = JsonLoading.getWorkout(name);
@@ -182,7 +190,12 @@ public class Main {
                     body.legs[Integer.parseInt(answers[1])].muscleHeads[Integer.parseInt(answers[2])].add((Integer)me.getValue());
                     break; 
                     
-            }
+            }/**********************************************************************************************************************************
+            Comparison of various work values between muscle heads within the muscles in the arm region
+            if the difference is greater than 6 a warning is issued to the client that they could be dealing damage towards
+            themselves from overwork and must create more variety in their exercises.
+            
+            ***************************************************************************************************************************************/
             calculation = body.arms[0].muscleHeads[0].getWork() - body.arms[0].muscleHeads[1].getWork();
             if (calculation > 6)
                 System.out.println("you are overworking your anterior head compared to your middle head in your shoulder");

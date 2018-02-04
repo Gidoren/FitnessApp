@@ -6,6 +6,7 @@
  */
 package fitnessapp;
 
+//Imports
 import java.io.InputStreamReader;
 import java.net.URL;
 import java.io.InputStream;
@@ -22,6 +23,7 @@ import java.util.Map;
  * Class for grabbing the JSON file if it isn't locally on the machine.
  * @author Tayler
  */
+//Constructor
 public class JsonLoading {
     
     private static JsonElement jse;
@@ -32,6 +34,7 @@ public class JsonLoading {
     private static File workoutList = new File(path);
     private static Gson googleJson = new Gson();;
     
+    //Used for testing, Main method 
     public static void main(String [] args)
     {
         new JsonLoading();
@@ -46,11 +49,12 @@ public class JsonLoading {
             System.out.println("Key is: " + "[" + temp[0] + ", " + temp[1] + ", " +temp[2] + "]"  + 
                     " & " + "value is: " + me.getValue());
         }
-        //System.out.println(a.getWorkout("front deltoid raise"));
         
         
     }
     
+    //Default constructor, it has to be initialized. before any static calls are made
+    //It will find the download the JSon from online if it isn't on the local machine.
     public JsonLoading()
     {
         try
@@ -66,14 +70,11 @@ public class JsonLoading {
                 URL theRealURL = new URL(url + BlobCode);
                 InputStream is = theRealURL.openStream();
                 InputStreamReader isr = new InputStreamReader(is);
-                //System.out.println("Here (Line 65): " + isr);
                 jse = parser.parse(isr);
-                //System.out.println("Here (Line 67): " + jse);
                 
                 workoutList.createNewFile();
                 PrintWriter writer = new PrintWriter(path, "UTF-8");
                 String workoutsToWrite = jse.getAsJsonObject().toString();
-                //System.out.println("Second Reading: " + workoutsToWrite);
                 writer.write(workoutsToWrite);
                 
                 writer.close();
@@ -89,9 +90,6 @@ public class JsonLoading {
                     System.out.println("fail ioe");
                 }
                
-                //System.out.println(workoutList.exists());
-                //System.out.println(workoutList.canRead());
-                //System.out.println("Success!");
             }
             else //If the workout List does exist
             {
@@ -100,7 +98,6 @@ public class JsonLoading {
                     FileReader fr = new FileReader(workoutList);
                     BufferedReader bfr = new BufferedReader(fr);
                     jse = parser.parse(bfr.readLine());
-                    //System.out.println("Reading JSON From File: " + jse.toString());
                     
                     fr.close();
                     bfr.close();
@@ -115,8 +112,6 @@ public class JsonLoading {
                 }
                 
             }
-            
-            //System.out.println( "Before the Reading" + jse.getAsJsonObject());
             jse = jse.getAsJsonObject().get("Workouts").getAsJsonObject();
         }
         catch (NullPointerException npe)
@@ -125,6 +120,9 @@ public class JsonLoading {
         }
     }
     
+    //The name of the workout is the input, and the output is a HashMap of the
+    // mapping that correlates to a muscle head and a value of work done. All the
+    //GUI has to do is to correlate button presses to a method call
     public static HashMap getWorkout(String name)
     {   
         //System.out.println("Searching for " + name);
