@@ -19,7 +19,7 @@
 
     <Button
         android:id="@+id/serra"
-        android:layout_width="99dp"
+        android:layout_width="102dp"
         android:layout_height="wrap_content"
         android:background="@android:drawable/btn_default"
         android:text="Serratus Posterior"
@@ -32,7 +32,7 @@
 
     <Button
         android:id="@+id/trapez"
-        android:layout_width="104dp"
+        android:layout_width="111dp"
         android:layout_height="wrap_content"
         android:background="@android:drawable/btn_default"
         android:text="Trapezius"
@@ -45,7 +45,7 @@
 
     <Button
         android:id="@+id/terra"
-        android:layout_width="77dp"
+        android:layout_width="81dp"
         android:layout_height="wrap_content"
         android:background="@android:drawable/btn_default"
         android:text="Terras"
@@ -58,7 +58,7 @@
 
     <Button
         android:id="@+id/latts"
-        android:layout_width="112dp"
+        android:layout_width="116dp"
         android:layout_height="wrap_content"
         android:background="@android:drawable/btn_default"
         android:text="Lattisimus Dorsi"
@@ -71,7 +71,7 @@
 
     <Button
         android:id="@+id/thoro"
-        android:layout_width="150dp"
+        android:layout_width="154dp"
         android:layout_height="64dp"
         android:background="@android:drawable/btn_default"
         android:text="Thoro-columbar Facia"

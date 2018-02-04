@@ -19,7 +19,7 @@
 
     <Button
         android:id="@+id/rectus"
-        android:layout_width="122dp"
+        android:layout_width="126dp"
         android:layout_height="wrap_content"
         android:background="@android:drawable/btn_default"
         android:text="Rectus Obdominus"
@@ -31,7 +31,7 @@
 
     <Button
         android:id="@+id/obliq"
-        android:layout_width="92dp"
+        android:layout_width="96dp"
         android:layout_height="wrap_content"
         android:background="@android:drawable/btn_default"
         android:text="Obliques"
@@ -44,7 +44,7 @@
 
     <Button
         android:id="@+id/sera"
-        android:layout_width="97dp"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:background="@android:drawable/btn_default"
         android:text="Serratus"

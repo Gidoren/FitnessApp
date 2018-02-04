@@ -8,7 +8,7 @@
 
     <Button
         android:id="@+id/calv"
-        android:layout_width="84dp"
+        android:layout_width="88dp"
         android:layout_height="wrap_content"
         android:text="Calves"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -20,19 +20,19 @@
 
     <Button
         android:id="@+id/hams"
-        android:layout_width="119dp"
+        android:layout_width="126dp"
         android:layout_height="wrap_content"
         android:text="Hamstrings"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.905"
+        app:layout_constraintHorizontal_bias="0.931"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.224" />
 
     <Button
         android:id="@+id/gluts"
-        android:layout_width="86dp"
+        android:layout_width="90dp"
         android:layout_height="wrap_content"
         android:text="Gluteus"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -44,12 +44,12 @@
 
     <Button
         android:id="@+id/quads"
-        android:layout_width="130dp"
+        android:layout_width="135dp"
         android:layout_height="wrap_content"
         android:text="Quadracepts"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.062"
+        app:layout_constraintHorizontal_bias="0.022"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.401" />
