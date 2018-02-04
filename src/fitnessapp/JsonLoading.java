@@ -129,11 +129,13 @@ public class JsonLoading {
         HashMap<String[],Integer> workouts = new HashMap();
         //System.out.print("Right Before the Array Call " + jse.toString());
        
-        JsonObject objs = jse.getAsJsonObject().get(name).getAsJsonObject();
+        JsonObject objs = jse.getAsJsonObject().get(name).getAsJsonObject();       
         
         for(int i = 1; objs.has(("key" + i)); ++i )
         {
-            String[] temp = objs.get(("key"+i)).toString().split(",");
+            String reallyTemp = objs.get(("key"+i)).toString();
+            reallyTemp = reallyTemp.substring(1,reallyTemp.length()-1);
+            String[] temp = reallyTemp.split(",");
             workouts.put(temp,Integer.parseInt(objs.get(("value"+i)).toString()));
             //temp = (HashMap<String, Integer>)((Object)(objs.get(i)));
         }

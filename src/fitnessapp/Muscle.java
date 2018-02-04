@@ -1,3 +1,4 @@
+package fitnessapp;
 public class Muscle {
     public String name;
     Heads[] muscleHeads;
