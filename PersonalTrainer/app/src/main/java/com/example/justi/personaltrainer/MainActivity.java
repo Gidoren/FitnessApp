@@ -12,6 +12,7 @@ public class MainActivity extends AppCompatActivity {
 
     private ImageButton rightArm;
     private ImageButton leftArm;
+    Calculator c;
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -39,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
 
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
         StrictMode.setThreadPolicy(policy);
-        Calculator c = new Calculator();
+        c = new Calculator();
     }
 
     public void callArms()

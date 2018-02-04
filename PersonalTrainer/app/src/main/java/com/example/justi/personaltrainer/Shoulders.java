@@ -33,8 +33,12 @@ public class Shoulders extends AppCompatActivity
             @Override
             public void onClick(View v)
             {
+
                 ++front_count;
-                front_num.setText(Integer.toString(front_count));
+                Calculator.workCalculations("front deltoid raise");
+                front_num.setText(Integer.toString(Calculator.getArmsShoulderAnterior()));
+                side_num.setText(Integer.toString(Calculator.getArmsShoulderMiddle()));
+                rear_num.setText(Integer.toString(Calculator.getArmsShouldersPosterior()));
             }
         });
 
@@ -46,7 +50,10 @@ public class Shoulders extends AppCompatActivity
             public void onClick(View v)
             {
                 ++side_count;
-                side_num.setText(Integer.toString(side_count));
+                Calculator.workCalculations("side deltoid raise");
+                front_num.setText(Integer.toString(Calculator.getArmsShoulderAnterior()));
+                side_num.setText(Integer.toString(Calculator.getArmsShoulderMiddle()));
+                rear_num.setText(Integer.toString(Calculator.getArmsShouldersPosterior()));
             }
         });
 
@@ -58,7 +65,10 @@ public class Shoulders extends AppCompatActivity
             public void onClick(View v)
             {
                ++rear_count;
-                rear_num.setText(Integer.toString(rear_count));
+                Calculator.workCalculations("rear deltoid flies");
+                front_num.setText(Integer.toString(Calculator.getArmsShoulderAnterior()));
+                side_num.setText(Integer.toString(Calculator.getArmsShoulderMiddle()));
+                rear_num.setText(Integer.toString(Calculator.getArmsShouldersPosterior()));
             }
         });
 
