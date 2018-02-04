@@ -72,7 +72,6 @@ public class Shoulders extends AppCompatActivity
             public void onClick(View v)
             {
                ++rear_count;
-                popUp();
                 Calculator.workCalculations("rear deltoid flies");
                 front_num.setText(Integer.toString(Calculator.getArmShoulderAnterior()));
                 side_num.setText(Integer.toString(Calculator.getArmShoulderMiddle()));
