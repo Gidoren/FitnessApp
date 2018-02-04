@@ -12,6 +12,9 @@ public int coreEls;
 
 public Body()
 {
+    /****************************************************************************
+    muscle array objects that will be used to differentiate and segment the h
+    ****************************************************************************/
 	arms = new Muscle[10];
 	armsEls = 0;
 	legs = new Muscle[10];
@@ -24,7 +27,14 @@ public Body()
 	coreEls = 0;
 }
 
-
+/*****************************************************************************
+AddMuscle Function
+Compares the string names contained in the muscle object X.
+if it falls into any of the conditionals for specific regions then the program
+will increment that regions array indexer and will store the muscle object
+into the proppsed muscle array for the region.
+eg: biceps are kept in the arms array and armsEls is incremented to factor that
+*******************************************************************************/
 public void addMuscle(Muscle x)
 {
 	if(x.getName() == "biceps" || x.getName() == "triceps" || x.getName() == "forearms" || x.getName() == "shoulders")
@@ -54,6 +64,9 @@ public void addMuscle(Muscle x)
 	}
 	
 }
+/*****************************
+Acessor functions 
+******************************/
 
 public Muscle[] getArms()
 {
@@ -65,7 +78,7 @@ public Muscle[] getLegs()
 	return legs;
 }
 
-public Muscle[] getchest()
+public Muscle[] getChest()
 {
 	return chest;
 }
@@ -73,6 +86,10 @@ public Muscle[] getchest()
 public Muscle[] getBack()
 {
 	return back;
+}
+public Muscle[] getCore()
+{
+    return core;
 }
 
 

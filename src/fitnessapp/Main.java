@@ -15,7 +15,6 @@ public class Main {
         Heads[] forearmsH = new Heads[3], calvesH = new Heads[2], hamstringsH = new Heads[3];
         Heads[] gluteusH = new Heads[3],quadricepsH = new Heads[3], pectMaH = new Heads[3], serratusPosH = new Heads[2], teresH = new Heads[2];
         Heads pectMiH = new Heads(), rectusH = new Heads(), obliquesH = new Heads(), trapeziusH = new Heads(), latissH = new Heads(), thoraH = new Heads(), serratusH = new Heads();
-        
         Anatomy[0] = new Muscle("shoulders");
         shoulderH[0] = new Heads("anterior");
         shoulderH[1]= new Heads("middle");        
@@ -58,7 +57,7 @@ public class Main {
             Anatomy[5].setHeads(hamstringsH[i]);     
         
         
-        Anatomy[6]= new Muscle("glueteus");
+        Anatomy[6]= new Muscle("gluteus");
         gluteusH[0]= new Heads("medius");
         gluteusH[1]= new Heads("maximus");
         gluteusH[2]= new Heads("minimus");
@@ -139,9 +138,9 @@ public class Main {
     
     public static void printBody(Body a)
     {
-        Muscle[] toPrint = a.getArms();
+        Muscle [] toPrint = a.getArms();
                 int g = a.armsEls;
-        for(int i = 0; i< a.armsEls; i++)
+        for(int i = 0; i< a.backEls-1; i++)
         {
             System.out.println(toPrint[i].getName());
         }
@@ -149,4 +148,3 @@ public class Main {
     }
 
 }
-
