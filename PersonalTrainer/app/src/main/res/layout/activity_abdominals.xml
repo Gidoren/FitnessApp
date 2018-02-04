@@ -6,37 +6,53 @@
     android:layout_height="match_parent"
     tools:context="com.example.justi.personaltrainer.Abdominals">
 
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/abdominal" />
+
     <Button
         android:id="@+id/rectus"
-        android:layout_width="382dp"
+        android:layout_width="122dp"
         android:layout_height="wrap_content"
-        android:text="r_obdominus"
+        android:background="@android:drawable/btn_default"
+        android:text="Rectus Obdominus"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.086" />
+        app:layout_constraintVertical_bias="0.771" />
 
     <Button
         android:id="@+id/obliq"
-        android:layout_width="385dp"
+        android:layout_width="92dp"
         android:layout_height="wrap_content"
+        android:background="@android:drawable/btn_default"
         android:text="Obliques"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.106"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.261" />
+        app:layout_constraintVertical_bias="0.498" />
 
     <Button
         android:id="@+id/sera"
-        android:layout_width="382dp"
+        android:layout_width="97dp"
         android:layout_height="wrap_content"
+        android:background="@android:drawable/btn_default"
         android:text="Serratus"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.836"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.455" />
+        app:layout_constraintVertical_bias="0.222" />
+
 </android.support.constraint.ConstraintLayout>

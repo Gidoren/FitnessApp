@@ -6,64 +6,79 @@
     android:layout_height="match_parent"
     tools:context="com.example.justi.personaltrainer.Back">
 
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="wrap_content"
+        android:layout_height="555dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/back_large" />
+
     <Button
         android:id="@+id/serra"
-        android:layout_width="wrap_content"
+        android:layout_width="99dp"
         android:layout_height="wrap_content"
+        android:background="@android:drawable/btn_default"
         android:text="Serratus Posterior"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.034" />
+        app:layout_constraintVertical_bias="0.594" />
 
     <Button
         android:id="@+id/trapez"
-        android:layout_width="174dp"
+        android:layout_width="104dp"
         android:layout_height="wrap_content"
+        android:background="@android:drawable/btn_default"
         android:text="Trapezius"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.25"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.157" />
+        app:layout_constraintVertical_bias="0.161" />
 
     <Button
         android:id="@+id/terra"
-        android:layout_width="172dp"
+        android:layout_width="77dp"
         android:layout_height="wrap_content"
+        android:background="@android:drawable/btn_default"
         android:text="Terras"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.768"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.291" />
+        app:layout_constraintVertical_bias="0.336" />
 
     <Button
         android:id="@+id/latts"
-        android:layout_width="178dp"
+        android:layout_width="112dp"
         android:layout_height="wrap_content"
+        android:background="@android:drawable/btn_default"
         android:text="Lattisimus Dorsi"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.113"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.436" />
+        app:layout_constraintVertical_bias="0.473" />
 
     <Button
         android:id="@+id/thoro"
-        android:layout_width="174dp"
-        android:layout_height="54dp"
+        android:layout_width="150dp"
+        android:layout_height="64dp"
+        android:background="@android:drawable/btn_default"
         android:text="Thoro-columbar Facia"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.584" />
+        app:layout_constraintVertical_bias="0.719" />
 
 </android.support.constraint.ConstraintLayout>

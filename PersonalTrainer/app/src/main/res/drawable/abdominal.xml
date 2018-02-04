@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:drawable="@drawable/sel_abdomin"
-        android:state_pressed="true" />
-    <item android:drawable="@drawable/spr_abdomin"
-        android:state_focused="true" />
+    <item android:state_pressed="true" android:drawable="@drawable/sel_abdomin" />
+    <item android:state_focused="true" android:drawable="@drawable/spr_abdomin" />
     <item android:drawable="@drawable/spr_abdomin" />
 </selector>
