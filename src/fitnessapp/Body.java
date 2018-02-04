@@ -1,6 +1,5 @@
 package fitnessapp;
 
-
 public class Body {
 Muscle[] arms;
 public int armsEls;
