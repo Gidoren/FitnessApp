@@ -1,4 +1,4 @@
-
+package fitnessapp;
 public class Heads {
 	  public int Work;
 	    String name;
@@ -29,6 +29,11 @@ public class Heads {
 	        Work = w;
 	    }
 	    
+            public void add(int w)
+            {
+                Work += w;
+            }
+            
 	    public void WorkOut(int worked)
 	    {
 	    	Work+=worked;

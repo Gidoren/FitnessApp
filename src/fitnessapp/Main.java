@@ -5,6 +5,10 @@
  */
 package fitnessapp;
 
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Set;
 
 public class Main {
     public static void main(String[] args)
@@ -124,8 +128,8 @@ public class Main {
         /*End of hardcoded muscles*/
         Body a = new Body();
         buildBody(a, Anatomy);
-        printBody(a);
-        
+        new JsonLoading();
+        workCalculations("front deltoid raise",a);
     }
 
     
@@ -146,6 +150,37 @@ public class Main {
             System.out.println(toPrint[i].getName());
         }
         
+    }
+    public static void workCalculations(String name, Body body)
+    {
+        HashMap<String[],Integer> temp = JsonLoading.getWorkout(name);
+         Set entrySet = temp.entrySet();
+        Iterator it = entrySet.iterator();
+        while(it.hasNext())
+        {
+            System.out.println("We are actually adding values to a muscle head now");
+            Map.Entry me = (Map.Entry)it.next();
+            String[] answers = (String[])me.getKey();
+            switch(answers[0])
+            {
+                case("arms"):
+                    body.arms[Integer.parseInt(answers[1])].muscleHeads[Integer.parseInt(answers[2])].add((int)me.getValue());
+                    break;
+                case("legs"):
+                    body.legs[Integer.parseInt(answers[1])].muscleHeads[Integer.parseInt(answers[2])].add((int)me.getValue());
+                    break;
+                case("chest"):
+                    body.chest[Integer.parseInt(answers[1])].muscleHeads[Integer.parseInt(answers[2])].add((int)me.getValue());
+                    break;
+                case("core"):
+                    body.legs[Integer.parseInt(answers[1])].muscleHeads[Integer.parseInt(answers[2])].add((int)me.getValue());
+                    break;
+                case("back"):
+                    body.legs[Integer.parseInt(answers[1])].muscleHeads[Integer.parseInt(answers[2])].add((int)me.getValue());
+                    break; 
+            }
+            
+        }
     }
 
 }

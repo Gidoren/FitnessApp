@@ -135,6 +135,7 @@ public class JsonLoading {
         
         for(int i = 1; objs.has(("key" + i)); ++i )
         {
+            System.out.println("Adding another muscle group");
             String[] temp = objs.get(("key"+i)).toString().split(",");
             workouts.put(temp,Integer.parseInt(objs.get(("value"+i)).toString()));
             //temp = (HashMap<String, Integer>)((Object)(objs.get(i)));
