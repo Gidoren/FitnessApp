@@ -1,3 +1,4 @@
+// Abdominals class file, which shows the different muscles of the abs
 package com.example.justi.personaltrainer;
 
 import android.support.v7.app.AppCompatActivity;
