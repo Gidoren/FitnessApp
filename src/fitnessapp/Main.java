@@ -157,6 +157,7 @@ public class Main {
     public static void workCalculations(String name, Body body)
     {
         HashMap<String[],Integer> temp = JsonLoading.getWorkout(name);
+        int calculation = 0;
          Set entrySet = temp.entrySet();
         Iterator it = entrySet.iterator();
         while(it.hasNext())
@@ -180,7 +181,26 @@ public class Main {
                 case("back"):
                     body.legs[Integer.parseInt(answers[1])].muscleHeads[Integer.parseInt(answers[2])].add((Integer)me.getValue());
                     break; 
+                    
             }
+            calculation = body.arms[0].muscleHeads[0].getWork() - body.arms[0].muscleHeads[1].getWork();
+            if (calculation > 6)
+                System.out.println("you are overworking your anterior head compared to your middle head in your shoulder");
+            else if(calculation < -6)
+                System.out.println("You are overworking your middle head compared to your anterior head in your shoulder");
+            calculation = body.arms[0].muscleHeads[1].getWork()-body.arms[0].muscleHeads[2].getWork();
+            if (calculation > 6)
+                System.out.print("You are overworking your middle head compared to your posterior head in your shoulder");
+            else if (calculation < -6)
+                System.out.println("you are overworking your posterior head compared to your middle head in your shoulder");
+            calculation = body.arms[0].muscleHeads[2].getWork() - body.arms[0].muscleHeads[0].getWork();
+            if(calculation> 6)
+                System.out.println("you are overworking your posterior head compared to your anterior head in your shoulder");
+            else if  (calculation< -6)
+                System.out.println("you are overworking your anterior head compared to your posterior head in your shoulder");
+                
+            
+
             
         }
     }
