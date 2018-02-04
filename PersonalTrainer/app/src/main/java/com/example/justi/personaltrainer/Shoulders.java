@@ -34,6 +34,7 @@ public class Shoulders extends AppCompatActivity
             public void onClick(View v)
             {
                 ++front_count;
+                popUp();
                 Calculator.workCalculations("front deltoid raise");
                 front_num.setText(Integer.toString(Calculator.getArmShoulderAnterior()));
                 side_num.setText(Integer.toString(Calculator.getArmShoulderMiddle()));
@@ -76,4 +77,9 @@ public class Shoulders extends AppCompatActivity
 
     }
 
+    protected void popUp()
+    {
+        startActivity(new Intent(Shoulders.this,Pop.class));
+    }
 }
+

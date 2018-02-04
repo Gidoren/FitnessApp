@@ -21,10 +21,10 @@
         <activity android:name=".Arms" />
         <activity android:name=".Shoulders" />
         <activity android:name=".Abdominals" />
-        <activity android:name=".Pectorals" />
         <activity android:name=".Chest" />
         <activity android:name=".Legs" />
         <activity android:name=".Back"></activity>
+        <activity android:name=".Pop" android:theme="@style/AppTheme.PopTheme"></activity>
     </application>
 
 </manifest>
