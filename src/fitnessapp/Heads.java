@@ -1,3 +1,8 @@
+/***************************************************************************
+the node class and lowest level of muscular structure in the body
+we are using the heads to make minute comparisons between each other as
+to not overwork them
+***************************************************************************/
 package fitnessapp;
 public class Heads {
 	  public int Work;

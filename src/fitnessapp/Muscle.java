@@ -1,3 +1,7 @@
+/*********************************************************************************************
+Muscles contain the muscle head node objects that are a sub section of the muscles themselves
+effectively a node within node that will be kept as arrays in the body class
+*********************************************************************************************/
 package fitnessapp;
 public class Muscle {
     public String name;
