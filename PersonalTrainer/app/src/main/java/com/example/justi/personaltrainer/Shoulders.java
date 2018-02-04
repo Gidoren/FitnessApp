@@ -72,6 +72,9 @@ public class Shoulders extends AppCompatActivity
             }
         });
 
+        front_num.setText(Integer.toString(Calculator.getArmsShoulderAnterior()));
+        side_num.setText(Integer.toString(Calculator.getArmsShoulderMiddle()));
+        rear_num.setText(Integer.toString(Calculator.getArmsShouldersPosterior()));
     }
 
 }
