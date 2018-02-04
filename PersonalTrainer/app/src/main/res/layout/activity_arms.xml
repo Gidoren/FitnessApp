@@ -55,7 +55,7 @@
 
     <Button
         android:id="@+id/forearm"
-        android:layout_width="92dp"
+        android:layout_width="98dp"
         android:layout_height="wrap_content"
         android:text="Forearm"
         app:layout_constraintBottom_toBottomOf="parent"
