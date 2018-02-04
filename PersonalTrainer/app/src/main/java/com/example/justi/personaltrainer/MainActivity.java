@@ -12,6 +12,7 @@ public class MainActivity extends AppCompatActivity {
 
     private ImageButton rightArm;
     private ImageButton leftArm;
+    private ImageButton abdominal;
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -37,6 +38,16 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        abdominal = (ImageButton)findViewById(R.id.abdominal);
+        abdominal.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                callAbs();
+            }
+        });
+
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
         StrictMode.setThreadPolicy(policy);
         Calculator c = new Calculator();
@@ -45,6 +56,12 @@ public class MainActivity extends AppCompatActivity {
     public void callArms()
     {
         Intent startNewActivity = new Intent(this, Arms.class);
+        startActivity(startNewActivity);
+    }
+
+    public void callAbs()
+    {
+        Intent startNewActivity = new Intent(this, Abdominals.class);
         startActivity(startNewActivity);
     }
 
