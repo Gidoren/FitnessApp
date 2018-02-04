@@ -198,6 +198,54 @@ public class Main {
                 System.out.println("you are overworking your posterior head compared to your anterior head in your shoulder");
             else if  (calculation< -6)
                 System.out.println("you are overworking your anterior head compared to your posterior head in your shoulder");
+            
+                        calculation = body.arms[1].muscleHeads[0].getWork() - body.arms[1].muscleHeads[1].getWork();
+            if (calculation > 6)
+                System.out.println("you are overworking your long head compared to your short head in your biceps");
+            else if(calculation < -6)
+                System.out.println("You are overworking your short head compared to your long head in your biceps");
+            calculation = body.arms[1].muscleHeads[1].getWork()-body.arms[1].muscleHeads[2].getWork();
+            if (calculation > 6)
+                System.out.print("You are overworking your short head compared to your bhrachialis head in your biceps");
+            else if (calculation < -6)
+                System.out.println("you are overworking your brachialis head compared to your short head in your biceps");
+            calculation = body.arms[1].muscleHeads[2].getWork() - body.arms[1].muscleHeads[0].getWork();
+            if(calculation> 6)
+                System.out.println("you are overworking your brachialis head compared to your long head in your biceps");
+            else if  (calculation< -6)
+                System.out.println("you are overworking your long head compared to your brachialis head in your biceps");
+            
+                        calculation = body.arms[2].muscleHeads[0].getWork() - body.arms[2].muscleHeads[1].getWork();
+            if (calculation > 6)
+                System.out.println("you are overworking your laterals head compared to your long head in your triceps");
+            else if(calculation < -6)
+                System.out.println("You are overworking your long head compared to your lateral head in your triceps");
+            calculation = body.arms[2].muscleHeads[1].getWork()-body.arms[2].muscleHeads[2].getWork();
+            if (calculation > 6)
+                System.out.print("You are overworking your long head compared to your medial head in your triceps");
+            else if (calculation < -6)
+                System.out.println("you are overworking your medial head compared to your long head in your triceps");
+            calculation = body.arms[2].muscleHeads[2].getWork() - body.arms[2].muscleHeads[0].getWork();
+            if(calculation> 6)
+                System.out.println("you are overworking your medial head compared to your lateral head in your triceps");
+            else if  (calculation< -6)
+                System.out.println("you are overworking your lateral head compared to your medial head in your triceps");
+            
+                        calculation = body.arms[3].muscleHeads[0].getWork() - body.arms[3].muscleHeads[1].getWork();
+            if (calculation > 6)
+                System.out.println("you are overworking your brachioradialis head compared to your flexors head in your forearms");
+            else if(calculation < -6)
+                System.out.println("You are overworking your flexors head compared to your brachioradialis head in your forearms");
+            calculation = body.arms[3].muscleHeads[1].getWork()-body.arms[3].muscleHeads[2].getWork();
+            if (calculation > 6)
+                System.out.print("You are overworking your flexors head compared to your extensors head in your forearms");
+            else if (calculation < -6)
+                System.out.println("you are overworking your extensors head compared to your flexors head in your forearms");
+            calculation = body.arms[3].muscleHeads[2].getWork() - body.arms[3].muscleHeads[0].getWork();
+            if(calculation> 6)
+                System.out.println("you are overworking your flexors head compared to your brachioradialis head in your forearms");
+            else if  (calculation< -6)
+                System.out.println("you are overworking your brachioradialis head compared to your flexor head in your forearms");
                 
             
 
