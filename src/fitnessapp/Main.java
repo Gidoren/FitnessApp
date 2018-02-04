@@ -158,6 +158,10 @@ public class Main {
         }
         
     }
+    
+    //This is the function that your buttons call. There is a body (called a)
+    //That you use for the body, and the name is the name of the workout, which
+    //is then called to the JsonLoading function.
     public static void workCalculations(String name, Body body)
     {
         HashMap<String[],Integer> temp = JsonLoading.getWorkout(name);
